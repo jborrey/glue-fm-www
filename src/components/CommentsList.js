@@ -4,12 +4,12 @@ import { API_ROOT } from '../constants/index';
 
 class CommentsList extends React.Component {
   state = {
-    comments: ['abc', 'def']
+    comments: []
   };
 
   handleReceivedComment = response => {
-    const { comment } = response;
-    const comments = [...this.state.comments, comment];
+    // TODO: right now, only handle concat (no editing of comments)
+    const comments = this.state.comments.concat(response);
     this.setState({ comments });
   };
 
@@ -19,7 +19,7 @@ class CommentsList extends React.Component {
     return (
       <div className="commentsList">
         <ActionCable
-          channel={{ channel: 'CommentsChannel' }}
+          channel={{ channel: 'ChannelsChannel', channel_id: '6q0rmAffnNnTzA' }}
           onReceived={this.handleReceivedComment}
         />
 
@@ -35,9 +35,13 @@ export default CommentsList;
 
 const mapComments = (comments) => {
   return comments.map(comment => {
+    comment = comment.comment
+
     return (
       <li key={comment.id}>
-        {comment.message}
+        <span className="commentMessage">{comment.message}</span>
+        -
+        <span className="commentTime">{comment.created_at}</span>
       </li>
     );
   });
