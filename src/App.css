@@ -43,3 +43,58 @@
 .Text ul {
   padding-bottom: 25px;
 }
+
+.LoginPage {
+}
+
+.GoogleLoginButton {
+  margin-top: 20%;
+  border-radius: 3px;
+  font-size: 22px;
+  color: #6489b3
+}
+
+.ChatView {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.LeftChatPane {
+  flex: 1;
+}
+
+.MiddleChatPane {
+  flex: 2;
+  border-width: 0px 1px 0px 1px;
+  border-style: solid;
+  border-color: #6489b3;
+  height: -webkit-fill-available;
+}
+
+.RightChatPane {
+  flex: 1;
+}
+
+.UserView {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.PictureAndName {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.VerticalCentered {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.UserName {
+  padding-left: 20px;
+  font-size: 20px
+}
+

@@ -17,7 +17,7 @@ class AboutPage extends React.Component {
             <li>Thread based commenting on tracks</li>
           </ul>
 
-          <p>If you would like to contact us, please reach out to contact@glue.fm. We are fully open source and welcome contribution to <a href="https://github.com/jborrey/glue-fm">the codebase.</a></p>
+          <p>If you would like to contact us, please reach out to contact.glue.fm@gmail.com. We are fully open source and welcome contribution to <a href="https://github.com/jborrey/glue-fm">the codebase.</a></p>
 
           <p> Why <i>glue.fm?</i> - we really like Bicep.</p>
         </div>
